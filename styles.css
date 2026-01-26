@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* Decided on a gradient background to make it a bit more unique */
+  background: linear-gradient(
+  180deg,
+  #eef3fb 0%,
+  #cfdcf0 50%,
+  #b6c8e6 100%  
+);
+  padding: 40px;
+}
+
+/* Button */
+#clickBtn {
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #0e60f8; 
+  color: #ffffff;            
+  border: 2px solid #03b4c8;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#clickBtn:hover {
+  background-color: #03b4c8;
+  color: #ffffff;
+}
+
+/* Image container with a gradient theme to match the background */
+#yourAgeAtTheTime {
+  margin-top: 25px;
+  padding: 15px;
+  width: 320px;
+  background: linear-gradient(
+  180deg,
+  #4b5563 0%,
+  #6b7280 55%,
+  #9ca3af 100%);
+  border: 2px solid #374151;
+  border-radius: 8px;
+}
+
+/* Image styling */
+#yourAgeAtTheTime img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
