@@ -10,7 +10,7 @@ body {
   padding: 40px;
 }
 
-/* Button */
+/* Button and Design */
 #clickBtn {
   padding: 12px 22px;
   font-size: 16px;
@@ -22,12 +22,13 @@ body {
   cursor: pointer;
 }
 
+/* Mouse over Button and Design */
 #clickBtn:hover {
   background-color: #03b4c8;
   color: #ffffff;
 }
 
-/* Image container with a gradient theme to match the background */
+/* Picture container with a gradient theme to match the background */
 #yourAgeAtTheTime {
   margin-top: 25px;
   padding: 15px;
@@ -37,11 +38,11 @@ body {
   #4b5563 0%,
   #6b7280 55%,
   #9ca3af 100%);
-  border: 2px solid #374151;
+  border: 2px solid #115eda;
   border-radius: 8px;
 }
 
-/* Image styling */
+/* Picture Size */
 #yourAgeAtTheTime img {
   width: 100%;
   height: auto;
