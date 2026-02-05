@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Assignment 4: Client-Side Form Validation and JSON Object Creation by Michael Pietrowski -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 14px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      box-sizing: border-box;
+    }
+
+    small {
+      display: block;
+      min-height: 1.2em;
+      margin-top: 4px;
+      color: red;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>User Registration</h1>
+
+  <form id="registrationForm" action="/submit-form" method="POST" novalidate>
+
+    <!-- First Name (required, at least 2 characters) -->
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstName" required minlength="2" />
+    <small id="firstNameError"></small>
+
+    <!-- Last Name (required, at least 2 characters) -->
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" required minlength="2" />
+    <small id="lastNameError"></small>
+
+    <!-- Email (required, must be a valid email format) -->
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+    <small id="emailError"></small>
+
+    <!-- Password (required, must be at least 8 characters, must contain at least one number and one uppercase letter) -->
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      required
+      minlength="8"
+      pattern="^(?=.*[A-Z])(?=.*\d).{8,}$"
+      title="Password must be at least 8 characters and include one uppercase letter and one number."
+    />
+    <small id="passwordError"></small>
+
+    <!-- Confirm Password (required, must match the Password field) -->
+    <label for="confirmPassword">Confirm Password</label>
+    <input
+      type="password"
+      id="confirmPassword"
+      name="confirmPassword"
+      required
+      minlength="8"
+    />
+    <small id="confirmPasswordError"></small>
+
+    <!-- Age (optional, if provided, must be a number between 18 and 100) -->
+    <label for="age">Age (optional, 18 to 100)</label>
+    <input type="number" id="age" name="age" min="18" max="100" />
+    <small id="ageError"></small>
+
+    <!-- Phone Number (optional, if provided, must be a valid format: XXX-XXX-XXXX) -->
+    <label for="phoneNumber">Phone Number (optional, XXX-XXX-XXXX)</label>
+    <input
+      type="text"
+      id="phoneNumber"
+      name="phoneNumber"
+      placeholder="123-456-7890"
+      pattern="^\d{3}-\d{3}-\d{4}$"
+    />
+    <small id="phoneNumberError"></small>
+
+    <!-- Submit button -->
+    <button type="submit">Submit</button>
+
+  </form>
+
+  <!-- Links to my JavaScript page -->
+  <script src="registration.js"></script>
+</body>
+</html>
